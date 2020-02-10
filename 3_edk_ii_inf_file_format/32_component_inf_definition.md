@@ -2,6 +2,7 @@
   3.2 Component INF Definition
 
   Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, ARM Limited. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -133,6 +134,8 @@ The following are common definitions used by multiple section types.
 <Eq>                 ::= <TS> "=" <TS>
 <FieldSeparator>     ::= "|"
 <FS>                 ::= <TS> <FieldSeparator> <TS>
+<SrcDepSeperator>    ::= ":"
+<DepS>               ::= <TS> <SrcDepSeperator> <TS>
 <Wildcard>           ::= "*"
 <CommaSpace>         ::= "," <Space>*
 <Cs>                 ::= "," <Space>*

@@ -2,6 +2,7 @@
   2.5 [Sources] Section
 
   Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, ARM Limited. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -92,6 +93,17 @@ The following is an example for sources sections.
 [Sources.X64]
   X64/DxeLoadFunc.c
 
+```
+
+The following example depicts the syntax to establish dependencies between
+files of different source types. As shown in the example below, Dsdt.asl will
+be compiled before DadtHandler.c:
+
+```ini
+[Sources.common]
+  DsdtHandler.c : Dsdt.asl
+  DsdtHandler.h
+  Dsdt.asl
 ```
 
 All Unicode files must be listed in the source section. If a Unicode file,

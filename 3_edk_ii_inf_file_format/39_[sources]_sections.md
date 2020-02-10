@@ -2,6 +2,7 @@
   3.9 [Sources] Sections
 
   Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, ARM Limited. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -74,7 +75,8 @@ This section is not valid for a generated "As Built" binary INF file.
 <Options>            ::= <FS> [<Family>] [<opt1>]
 <opt1>               ::= <FS> [<TagName>] [<opt2>]
 <opt2>               ::= <FS> [<ToolCode>] [<opt3>]
-<opt3>               ::= <FS> [<FeatureFlagExpress>]
+<opt3>               ::= <FS> [<FeatureFlagExpress>] [<opt4>]
+<opt4>               ::= <DepS> <FileNameDependency>+
 <Family>             ::= {"MSFT"} {"GCC"} {"INTEL"} {<Wildcard>}
 <TagName>            ::= {<ToolWord>} {"*"}
 <ToolCode>           ::= _CommandCode_
@@ -83,7 +85,7 @@ This section is not valid for a generated "As Built" binary INF file.
 
 #### Parameters
 
-**_Filename_**
+**_Filename_, _FileNameDependency_**
 
 Paths listed in the filename elements of the `[Sources]` section must be
 relative to the directory the INF file resides in. Use of "..", "." and "../"
